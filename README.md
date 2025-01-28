@@ -56,5 +56,87 @@ A modern and fully functional e-commerce website built using **Vite**, **React**
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/saurabhgautam56/project-ecommerce.git
+git clone https://github.com/saurabhgautam56/project-ecommerce-.git
 cd ecommerce-website
+
+### 2. Install Dependencies
+Install the required packages using npm or yarn:
+```bash
+Copy
+Edit
+npm install
+# or
+yarn install
+
+### 3. Start the Development Server
+Run the development server:
+```bash
+Copy
+Edit
+npm run dev
+# or
+yarn dev
+Access the app at http://localhost:5173.
+
+🛠️ Project Structure
+php
+Copy
+Edit
+ecommerce-website/
+├── public/                 # Static assets
+├── src/
+│   ├── components/         # Reusable components (Navbar, ProductCard, etc.)
+│   ├── pages/              # Page components (Home, ProductDetail, Cart, etc.)
+│   ├── context/            # Context API setup for state management
+│   ├── hooks/              # Custom React hooks
+│   ├── utils/              # Utility functions (formatting, API helpers)
+│   ├── styles/             # Global styles and Tailwind configuration
+│   ├── App.tsx             # Main app component
+│   ├── main.tsx            # Entry point
+├── tailwind.config.js      # Tailwind CSS configuration
+├── vite.config.ts          # Vite configuration
+├── tsconfig.json           # TypeScript configuration
+├── package.json            # Project dependencies and scripts
+
+
+📦 Sample Data
+Add your product data in src/data/products.ts:
+
+typescript
+Copy
+Edit
+export const products = [
+  {
+    id: 1,
+    name: "T-Shirt",
+    price: 1499,
+    originalPrice: 1999,
+    discount: 25,
+    image: "/images/tshirt.jpg",
+    description: "Comfortable and stylish cotton T-shirt.",
+    sizes: ["S", "M", "L", "XL"],
+  },
+  // Add more products here
+];
+
+
+🔧 Configuration
+Environment Variables
+Create a .env file in the root directory and add the following:
+
+env
+Copy
+Edit
+VITE_FIREBASE_API_KEY=your_firebase_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_firebase_project_id
+VITE_RAZORPAY_KEY=your_razorpay_key
+
+
+🛠️ Scripts
+Command	Description
+npm run dev	Run the development server
+npm run build	Build the project for production
+npm run lint	Run ESLint to lint your code
+npm run test	Run tests (if implemented)
+
